@@ -16,17 +16,18 @@ namespace Shop
         }
 
 
-        public double finalprice()
+        public double[] pricelist()
         {
-            double price = 0;
+            double[] prices = null;
             if(ShoppingList != null)
             {
+                prices = new double[ShoppingList.Length];
                 for(int i = 0; i < ShoppingList.Length; i++)
                 {
-                    price += ShoppingList[i].price;
+                    prices[i]= ShoppingList[i].Price;
                 }
             }
-            return price;
+            return prices;
         }
         public string[] FullList()
         {
